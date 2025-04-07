@@ -9,6 +9,13 @@ app.use(cors({
     credentials: true
 }))
 
+
+//to access from browser
+// app.get("/", (req, res) => {
+//     res.send("Welcome to the homepage! Server is running.");
+//   });
+  
+
 app.use(express.json({limit: "16kb"}))
 app.use(express.urlencoded({extended: true,limit : "16kb"})) // It allows your server to read data sent from HTML form submissions (URL-encoded data)
 app.use(express.static("public"))
